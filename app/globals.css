@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #1B1610;
+  --sand: #EDE6D6;
+  --sand-deep: #E3D9C3;
+  --tanzanite: #9C7418;
+  --tanzanite-bright: #E4B54A;
+  --laterite: #8A5A10;
+  --gold: #E4B54A;
+  --paper: #F7F2E7;
+  --line: rgba(27, 22, 16, 0.18);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-sand: var(--sand);
+  --color-sand-deep: var(--sand-deep);
+  --color-tanzanite: var(--tanzanite);
+  --color-tanzanite-bright: var(--tanzanite-bright);
+  --color-laterite: var(--laterite);
+  --color-gold: var(--gold);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-instrument);
+  --font-mono: var(--font-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--sand);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
