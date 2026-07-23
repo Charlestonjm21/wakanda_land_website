@@ -7,6 +7,52 @@ export const AREAS: { slug: AreaSlug; label: string }[] = [
   { slug: "mkonoo", label: "Mkonoo" },
 ];
 
+export const AREA_IMAGES: Record<AreaSlug, string[]> = {
+  "njiro-ndogo": [
+    "DJI_20260722165827_0085_D.jpg",
+    "DJI_20260722165834_0086_D.jpg",
+    "DJI_20260722165858_0087_D.jpg",
+    "DJI_20260722165913_0088_D.jpg",
+    "DJI_20260722165929_0089_D.jpg",
+    "DJI_20260722170000_0090_D.jpg",
+    "DJI_20260722170016_0091_D.jpg",
+  ].map((f) => `/images/njiro-ndogo/${f}`),
+  "njiro-ndogo-2": [
+    "DJI_20260722174903_0133_D.jpg",
+    "DJI_20260722174913_0134_D.jpg",
+    "DJI_20260722174922_0135_D.jpg",
+    "DJI_20260722174937_0136_D.jpg",
+    "DJI_20260722174953_0137_D.jpg",
+    "DJI_20260722174955_0138_D.jpg",
+    "DJI_20260722175035_0139_D.jpg",
+    "DJI_20260722175117_0140_D.jpg",
+    "DJI_20260722175131_0141_D.jpg",
+    "DJI_20260722175144_0142_D.jpg",
+  ].map((f) => `/images/njiro-ndogo-2/${f}`),
+  "intel-loti": [
+    "DJI_20260722171303_0092_D.jpg",
+    "DJI_20260722171340_0094_D.jpg",
+    "DJI_20260722171346_0095_D.jpg",
+    "DJI_20260722171407_0097_D.jpg",
+    "DJI_20260722171445_0098_D.jpg",
+    "DJI_20260722171459_0099_D.jpg",
+    "DJI_20260722171550_0101_D.jpg",
+    "DJI_20260722171626_0104_D.jpg",
+    "DJI_20260722171642_0105_D.jpg",
+  ].map((f) => `/images/intel-loti/${f}`),
+  mkonoo: [
+    "DJI_20260722173416_0109_D.jpg",
+    "DJI_20260722173608_0118_D.jpg",
+    "DJI_20260722173633_0119_D.jpg",
+    "DJI_20260722173634_0120_D.jpg",
+    "DJI_20260722173731_0122_D.jpg",
+    "DJI_20260722173746_0123_D.jpg",
+    "DJI_20260722173903_0126_D.jpg",
+    "DJI_20260722173915_0127_D.jpg",
+    "DJI_20260722173949_0131_D.jpg",
+  ].map((f) => `/images/mkonoo/${f}`),
+};
+
 export type Listing = {
   id: string;
   area: AreaSlug;
